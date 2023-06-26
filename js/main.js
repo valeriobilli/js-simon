@@ -16,7 +16,7 @@ document.getElementById("numbers").innerText = randomNumbers;
 // naconde i numeri dopo 30 secondi
 setTimeout(hideNumbers, 20 * 1000);
 
-// chiede i numeri
+// prompt per chiedere i numeri
 setTimeout(function () {
 
     const answerNumbers = askNumbers();
@@ -39,6 +39,7 @@ function hideNumbers() {
     document.getElementById("message").innerText = "Quali sono i 5 numeri scelti da Simon?"
 }
 
+// chiede 5 numeri all'utente tramite prompt
 function askNumbers() {
 
     const answerNumbers = [];
@@ -57,6 +58,7 @@ function askNumbers() {
     return answerNumbers;
 }
 
+// confronta i numeri inseriti nel prompt con i numeri generati dalla pagina
 function confrontNumbers(randomNumbers, answerNumbers) {
 
     const guessedNumbers = [];
@@ -70,5 +72,6 @@ function confrontNumbers(randomNumbers, answerNumbers) {
     }
 
     return guessedNumbers;
+
 }
 
