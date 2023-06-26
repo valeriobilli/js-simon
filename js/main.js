@@ -12,8 +12,8 @@ while (randomNumbers.length < 5) {
 
 document.getElementById("numbers").innerText = randomNumbers;
 
+setTimeout(hideNumbers, 3 * 10000);
 
-console.log(randomNumbers);
 
 
 
@@ -21,4 +21,9 @@ console.log(randomNumbers);
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function hideNumbers() {
+    document.getElementById("numbers").innerText = "* * * * *";
+    document.getElementById("message").innerText = "Quali sono i 5 numeri casuali?"
 }
